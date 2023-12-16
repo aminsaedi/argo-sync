@@ -19,7 +19,7 @@ spec:
         app: python-prometheus-deployment
     spec:
       containers:
-        - image: ghcr.io/aminsaedi/prometheus-python-playground:v1.6
+        - image: ghcr.io/aminsaedi/prometheus-python-playground:v1.7
           name: prometheus-python-playground
           resources: {}
 status: {}
