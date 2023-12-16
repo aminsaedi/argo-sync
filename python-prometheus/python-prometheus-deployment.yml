@@ -5,6 +5,7 @@ metadata:
   labels:
     app: python-prometheus-deployment
   name: python-prometheus-deployment
+  namespace: amin-python
 spec:
   replicas: 1
   selector:
@@ -18,7 +19,7 @@ spec:
         app: python-prometheus-deployment
     spec:
       containers:
-      - image: ghcr.io/aminsaedi/prometheus-python-playground:master
-        name: prometheus-python-playground
-        resources: {}
+        - image: ghcr.io/aminsaedi/prometheus-python-playground:master
+          name: prometheus-python-playground
+          resources: {}
 status: {}

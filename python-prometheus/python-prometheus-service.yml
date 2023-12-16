@@ -5,16 +5,17 @@ metadata:
   labels:
     app: python-prometheus-service
   name: python-prometheus-service
+  namespace: amin-python
 spec:
   ports:
-  - name: 8000-8000
-    port: 8000
-    protocol: TCP
-    targetPort: 8000
-  - name: 8080-8080
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - name: 8000-8000
+      port: 8000
+      protocol: TCP
+      targetPort: 8000
+    - name: 8080-8080
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
   selector:
     app: python-prometheus-service
   type: ClusterIP
