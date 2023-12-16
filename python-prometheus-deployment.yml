@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: python-prometheus-deployment
+  name: python-prometheus-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-prometheus-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: python-prometheus-deployment
+    spec:
+      containers:
+      - image: ghcr.io/aminsaedi/prometheus-python-playground:master
+        name: prometheus-python-playground
+        resources: {}
+status: {}
