@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: python-prometheus-service
+    name: amin
   name: python-prometheus-service
   namespace: amin-python
 spec:
