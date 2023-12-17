@@ -8,7 +8,7 @@ metadata:
   name: python-prometheus-deployment
   namespace: amin-python
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: python-prometheus-deployment
@@ -22,7 +22,7 @@ spec:
         name: amin
     spec:
       containers:
-        - image: ghcr.io/aminsaedi/prometheus-python-playground:v2
+        - image: ghcr.io/aminsaedi/prometheus-python-playground:v2.1
           name: prometheus-python-playground
           ports:
             - containerPort: 8000
