@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: python-prometheus-service-monitor
+  labels:
+    app: python-prometheus-app
+    release: my-kube-prometheus-stack
+    jobLabel: python
+spec:
+  attachMetadata:
+    node: false
+  endpoints:
+    - port: metrics-expose
+  jobLabel: jobLabel
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      name: amin
+      app: python-prometheus-service
