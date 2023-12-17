@@ -8,16 +8,16 @@ metadata:
   namespace: amin-python
 spec:
   ports:
-    - name: 8000-8000
+    - name: metrics-expose
       port: 8000
       protocol: TCP
       targetPort: 8000
-    - name: 8080-8080
+    - name: app-expose
       port: 8080
       protocol: TCP
       targetPort: 8080
   selector:
-    app: python-prometheus-service
+    app: python-prometheus-deployment
   type: ClusterIP
 status:
   loadBalancer: {}
