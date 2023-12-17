@@ -22,7 +22,7 @@ spec:
         name: amin
     spec:
       containers:
-        - image: ghcr.io/aminsaedi/prometheus-python-playground:v1.8
+        - image: ghcr.io/aminsaedi/prometheus-python-playground:v1.9
           name: prometheus-python-playground
           ports:
             - containerPort: 8000
